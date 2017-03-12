@@ -1,0 +1,16 @@
+eval "$(rbenv init -)"
+
+PATH=$PATH:/usr/bin/local
+PATH=~/bin/dev:$PATH
+export GOPATH="~/gocode/"
+
+#
+## iTerm and Terminal use login shells, get the stuff from .bashrc too
+#
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+
+# ZooKeeper
+if [ -d "$HOME/opt/zookeeper" ]; then
+    export PATH="$PATH:$HOME/opt/zookeeper/bin";
+fi
+
